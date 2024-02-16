@@ -71,7 +71,7 @@ export default function App() {
             alt={country.name.common}
             style={imageStyle}
           />
-          <h2>{country.name.common}</h2>
+          <p>{country.name.common}</p>
         </div>
       ))}
     </div>
