@@ -29,10 +29,15 @@ export default function App() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    try{
+      fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((data) => setCountries(data))
       .catch((err) => console.log(err));
+    }
+    catch(err){
+      console.log(err);
+    }
   }, []);
 
   return (
